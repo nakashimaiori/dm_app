@@ -2,7 +2,7 @@
 <h2>User一覧ページ</h2>
 
 <% if user_signed_in? %>
-    <h2><%= current_user.email %>でログインしています</h2> 
+    <h2><%= current_user.email %>でログインしています</h2> <%= link_to "通知", notifications_index_path %>
     <%= link_to "SignOut", destroy_user_session_path, :method => :delete, class:"signOutButton" %>
 
 
